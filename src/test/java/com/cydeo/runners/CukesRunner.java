@@ -1,0 +1,21 @@
+package com.cydeo.runners;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+
+    @RunWith(Cucumber.class)
+    @CucumberOptions(
+
+            plugin = {
+                    "html:target/cucumber-reports.html" //rapor eklemek için
+            },
+            features = "src/test/resources/features",
+            glue = "com/cydeo/step_definitions",
+            dryRun = false, //buraya true dersen sadece olmayanları görürsün.true da bütünkısım yapılmaz sadece olmayan açılır.aşağı kısımda
+            tags = " @wiki", //buraya hangi tagı koyarsan onu yazdırır.
+           publish = true //generating a report with public link link rapora ulaşmak için
+    )
+    public class CukesRunner {}
+
