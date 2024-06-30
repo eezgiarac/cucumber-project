@@ -32,7 +32,7 @@ public class VytrackLoginPge {
         loginBtn.click();
     }
 
-    public void login(String userType) { //usertype = sales manager
+    public void login(String userType) { //usertype = sales manager...
 
         userType = userType.replace(" ","_");
         usernameInput.sendKeys(ConfigurationReader.getProperty(userType + "_username"));
