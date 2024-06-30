@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
             features = "src/test/resources/features",
             glue = "com/cydeo/step_definitions",
             dryRun = false, //buraya true dersen sadece olmayanları görürsün.true da bütünkısım yapılmaz sadece olmayan açılır.aşağı kısımda
-            tags = " @wiki", //buraya hangi tagı koyarsan onu yazdırır.
+            tags = "@salesmanager or @driver and not @storemanager", //buraya hangi tagı koyarsan onu yazdırır.
            publish = true //generating a report with public link link rapora ulaşmak için
     )
     public class CukesRunner {}
