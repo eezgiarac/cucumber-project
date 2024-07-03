@@ -9,12 +9,14 @@ import org.junit.runner.RunWith;
     @CucumberOptions(
 
             plugin = {
-                    "html:target/cucumber-reports.html" //rapor eklemek için
+                    "html:target/cucumber-reports.html",
+                    "rerun:target/rerun.txt",
+                    "me.jvt.cucumber.report.PrettyReports:target/cucumber"
             },
             features = "src/test/resources/features",
             glue = "com/cydeo/step_definitions",
             dryRun = false, //buraya true dersen sadece olmayanları görürsün.true da bütünkısım yapılmaz sadece olmayan açılır.aşağı kısımda
-            tags = "@salesmanager or @driver and not @storemanager", //buraya hangi tagı koyarsan onu yazdırır.
+            tags = "@wip", //buraya hangi tagı koyarsan onu yazdırır.
            publish = true //generating a report with public link link rapora ulaşmak için
     )
     public class CukesRunner {}

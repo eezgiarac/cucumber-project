@@ -30,3 +30,17 @@ Background:
    # Given user is on the login page
     When user enters the "sales manager" information
     Then user enters the sales manager information
+@vytracsceo
+  Scenario Outline: Login with invalid credential
+   # Given user is on the login page
+    When the user login with "<username>","<password>"
+    Then the user should not be able to log in
+
+    Examples:
+      | username        | password      |
+      | wrongUserName   | UserUser123   |
+      | salesmanager101 | wrongPassword |
+      | wrongUserName   | wrongPassword |
+      | wrongUserName   | empty         |
+      | empty           | wrongPassword |
+      | empty           | empty         |

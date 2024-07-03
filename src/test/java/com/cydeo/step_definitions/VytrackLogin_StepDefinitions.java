@@ -51,4 +51,14 @@ public class VytrackLogin_StepDefinitions {
     public void userEntersTheInformation(String userType) {
         vytrackLoginPge.login(userType);
     }
+
+    @When("the user login with {string},{string}")
+    public void theUserLoginWith(String username, String password) {
+        vytrackLoginPge.login(username,password);
+    }
+
+    @Then("the user should not be able to log in")
+    public void theUserShouldNotBeAbleToLogIn() {
+        Assert.assertTrue("Title verification is failed!",Driver.getDriver().getTitle().equals("Login"));
+    }
 }
