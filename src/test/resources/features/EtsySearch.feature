@@ -21,3 +21,11 @@ Feature: Etsy search functionality
     When User types "Wooden Spoon" in the search box
     And user click to Etsy search button
     Then User sees "Wooden Spoon - Etsy" is in the title
+
+
+  Scenario: Etsy Search Functionality Title Verification (with parameterization)
+    Given user is on the Etsy homepage
+    When user types "Metal Spoon" in the search box
+    And user click to Etsy search button
+    Then user sees "Metal spoon - Etsy" is in the title
+
