@@ -60,5 +60,14 @@ public class VytrackLogin_StepDefinitions {
     @Then("the user should not be able to log in")
     public void theUserShouldNotBeAbleToLogIn() {
         Assert.assertTrue("Title verification is failed!",Driver.getDriver().getTitle().equals("Login"));
+
+
+    }
+
+    @When("user enters the store manager information from the environment")
+    public void userEntersTheStoreManagerInformationFromTheEnvironment() {
+        vytrackLoginPge.envLogin();
+
+
     }
 }

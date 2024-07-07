@@ -44,3 +44,9 @@ Background:
       | wrongUserName   | empty         |
       | empty           | wrongPassword |
       | empty           | empty         |
+
+      @envData
+        Scenario: Login as store manager with env variables
+
+          When user enters the store manager information from the environment
+          Then user should be able to login
